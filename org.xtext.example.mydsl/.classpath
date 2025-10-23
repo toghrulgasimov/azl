@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="src-gen"/>
+	<classpathentry kind="src" path="xtend-gen"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="lib" path="C:/Users/toghr/.m2/repository/org/eclipse/emf/org.eclipse.emf.common/2.30.0/org.eclipse.emf.common-2.30.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/toghr/.m2/repository/org/eclipse/emf/org.eclipse.emf.ecore/2.36.0/org.eclipse.emf.ecore-2.36.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/toghr/.m2/repository/org/eclipse/emf/org.eclipse.emf.ecore.change/2.16.0/org.eclipse.emf.ecore.change-2.16.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/toghr/.m2/repository/org/eclipse/emf/org.eclipse.emf.ecore.xmi/2.37.0/org.eclipse.emf.ecore.xmi-2.37.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
