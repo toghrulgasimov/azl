@@ -33,6 +33,7 @@ class MyDslJvmModelInferrer extends AbstractModelInferrer {
       if (element.superType !== null)
         superTypes += element.superType.cloneWithProxies
 
+	 
       // Add built-in capet() method
       members += it.toMethod("capet", typeRef(void)) [
         parameters += it.toParameter("msg", typeRef(Object))
@@ -41,6 +42,8 @@ class MyDslJvmModelInferrer extends AbstractModelInferrer {
           
         '''
       ]
+      
+      
 
       // Optional main() method if "esas" exists
       val hasEsas = element.features.filter(Operation).exists[it.name == 'esas']

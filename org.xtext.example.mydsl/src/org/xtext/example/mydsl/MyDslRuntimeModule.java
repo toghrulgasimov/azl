@@ -5,9 +5,14 @@ package org.xtext.example.mydsl;
 
 import com.google.inject.Binder;
 import com.google.inject.Singleton;
+
+import org.eclipse.xtext.common.types.access.IJvmTypeProvider.Factory;
 import org.eclipse.xtext.common.types.util.TypeReferences;
+import org.eclipse.xtext.scoping.IScopeProvider;
 import org.eclipse.xtext.xbase.XbaseRuntimeModule;
 import org.eclipse.xtext.xbase.typesystem.computation.ITypeComputer;
+import org.eclipse.xtext.xbase.typesystem.computation.XbaseTypeComputer;
+import org.xtext.example.mydsl.scoping.MyDslScopeProvider;
 import org.xtext.example.mydsl.types.MyDslTypeComputer;
 import org.xtext.example.mydsl.types.MyDslTypeReferences;
 
@@ -17,4 +22,22 @@ public class MyDslRuntimeModule extends AbstractMyDslRuntimeModule {
 	public Class<? extends TypeReferences> bindTypeReferences() {
 	    return org.xtext.example.mydsl.types.MyDslTypeReferences.class;
 	}
+	
+	
+//    public void nconfigureTypeReferences(Binder binder) {
+//        binder.bind(TypeReferences.class).to(MyDslTypeReferences.class);
+//    }
+    
+    public Class<? extends XbaseTypeComputer> bindXbaseTypeComputer() {
+        return MyDslTypeComputer.class;
+    }
+//    @Override
+//    public Class<? extends IScopeProvider> bindIScopeProvider() {
+//    	// TODO Auto-generated method stub
+//    	return super.bindIScopeProvider();
+//    }
+//    @Override
+    public Class<? extends IScopeProvider> bindIScopeProvider() {
+        return MyDslScopeProvider.class;
+    }
 }
